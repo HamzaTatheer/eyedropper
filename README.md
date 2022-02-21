@@ -1,2 +1,2 @@
 # eyedropper
- a simple eyedropper chrome extension
+Basic Eye Dropper extension for picking color

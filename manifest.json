@@ -1,0 +1,17 @@
+{
+    "name": "Eye Dropper",
+    "description": "A Color Picker to selection color from browser",
+    "homepage_url": "https://github.com/hamzatatheer/eyedropper/",
+    "author": "Hamza Tatheer",
+    "version": "0.2.0",
+    "manifest_version": 3,
+    "icons": {
+
+    },
+    "action": {
+        "default_icon": {
+        },
+        "default_title": "Pick a color!",
+        "default_popup": "popup/popup.html"
+    }
+}

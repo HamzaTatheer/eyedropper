@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  html {
+    width: 250px;
+    font-size: 20px;
+  }
+  
+  body {
+    text-align: center;
+    margin: 0px;
+  }
+
+
+  .animated_rainbow_1 {
+
+    background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+    -webkit-animation: animatedBackground_a 5s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000;
+    background-clip: text;
+  }
+
+  @keyframes animatedBackground_a {
+      0% { background-position: 0 0 }
+      100% { background-position: -500px 0 }
+  }
+  
+  button {
+    width: 100%;
+    background: white;
+    border-radius: 0px;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: inherit;
+  }
+  
+  .colors {
+    margin: 1rem 0 0 0;
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .colors .color {
+    color: black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    box-sizing: border-box;
+    flex: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .colors .color:hover {
+    color: lightgray;
+  }
+  
+  .colors .color .del {
+    cursor: pointer;
+    position: absolute;
+    top: -.25rem;
+    right: -.25rem;
+    border-radius: 50%;
+    opacity: 0;
+    background: inherit;
+    outline: 2px solid currentColor;
+    width: .75rem;
+    height: .75rem;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(-7px -2px, 116.67% -3px, 125% 133.33%, 57.92% 100%, 33.33% 91.67%, 11.67% 77.21%, 0px 50%);
+  }
+  
+  .colors .color .del::before {
+    content: 'X';
+    font-size: .5rem;
+  }
+  
+  .colors .color:hover .del {
+    opacity: 1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  
+
+  .message{
+    background:black;
+    color: white;
+    mix-blend-mode: difference;
+    padding: 10px;
+  }
+  
+  .color-picker-container{
+    padding:1rem;
+  }
+</style>
+
+
+<div class="message hidden"></div>
+
+<div class="color-picker-container">
+  <button title='Pick a color from your screen, add it to your colors, and the clipboard'>
+    Click To Pick Color
+  </button>
+  <ul class="colors"></ul>
+</div>
+<script src="popup.js" nonce="8IBTHwOdqNKAWeKl7plt8g=="></script>
